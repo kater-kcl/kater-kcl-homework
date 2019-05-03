@@ -42,7 +42,7 @@ int main()
                 if (tem<0) {
                     tem=0;
                 }
-                height+=tem;
+                height[k]+=tem;
                 add+=tem;
             }
         }
