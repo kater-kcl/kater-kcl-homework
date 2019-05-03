@@ -14,21 +14,20 @@ int main()
     for (int i=1; i<=n; i++) {
         cin>>height[i];
     }
-    int R = 0,L = 0,min=0,add=0,tem=0;
+    int R = 0,L = 0,min=0,add=0,tem=0,kk=1;
+    while(kk){
     for (int i=1; i<=n; i++) {
         
         if (height[i]>height[i+1]) {
             L=i;
             for (; height[i]>=height[i+1]; i++) {
-                if (i==n) {
-                    cout<<add;
-                    return 0;
+                if (i==n+1) {
+                    break;
                 }
             }
             while (height[i]<=height[i+1]) {
-                if (i==n) {
-                    cout<<add;
-                    return 0;
+                if (i==n+1) {
+                    break;
                 }
                 i++;
             }
@@ -48,6 +47,7 @@ int main()
             }
         }
         
+    }
     }
     cout<<add;
     return 0;
