@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 using namespace std;
@@ -37,17 +38,17 @@ int main()
             if (L==n+1) {
                 break;
             }
-            for (int k=L; k<=R; k++) {
+            for (int k=L+1; k<R; k++) {
                 tem=min-height[k];
                 if (tem<0) {
                     tem=0;
                 }
+                height+=tem;
                 add+=tem;
             }
         }
         
     }
     cout<<add;
-	return 0;
+    return 0;
 }
-
